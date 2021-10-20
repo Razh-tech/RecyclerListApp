@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailUserActivity">
+
+    <TextView
+        style="@style/TextSpec"
+        android:id="@+id/tv_item_repositoryText"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="64dp"
+        android:text="@string/repository"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/img_item_photo"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item_username" />
+
+    <TextView
+        style="@style/TextSpec"
+        android:id="@+id/tv_item_followersText"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="64dp"
+        android:text="@string/followers"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/img_item_photo"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item_username" />
+
+    <TextView
+        style="@style/TextSpec"
+        android:id="@+id/tv_item_followingText"
+        android:layout_marginStart="192dp"
+        android:layout_marginTop="64dp"
+        android:text="@string/following"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/img_item_photo"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item_username" />
+
+    <TextView
+        style="@style/TextSpec"
+        android:id="@+id/tv_item_following"
+        android:layout_marginStart="192dp"
+        android:layout_marginTop="44dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/img_item_photo"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item_username" />
+
+    <TextView
+        style="@style/TextSpec"
+        android:id="@+id/tv_item_followers"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="44dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/img_item_photo"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item_username" />
+
+    <ImageView
+        android:id="@+id/img_item_photo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/img_pp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_item_name"
+        app:layout_constraintEnd_toStartOf="@+id/tv_item_repository"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ImageContrastCheck"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        style="@style/TextSpec.Names"
+        android:id="@+id/tv_item_username"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/img_item_photo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/github_username" />
+
+    <TextView
+        style="@style/TextSpec.Names"
+        android:id="@+id/tv_item_name"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="156dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/github_fullName" />
+
+    <TextView
+        style="@style/TextSpec.Desc"
+        android:id="@+id/tv_item_location"
+        android:text="@string/location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item_name" />
+
+    <TextView
+        style="@style/TextSpec.Desc"
+        android:id="@+id/tv_item_company"
+        android:text="@string/company"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item_location" />
+
+    <ImageView
+        style="@style/TextSpec.ImgView"
+        android:id="@+id/iv_workplace"
+        android:contentDescription="@string/ico_workplace"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_my_location"
+        app:srcCompat="@drawable/ic_baseline_work_24" />
+
+    <ImageView
+        style="@style/TextSpec.ImgView"
+        android:id="@+id/iv_back_button"
+        android:contentDescription="@string/ico_backButton"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+        tools:ignore="RedundantDescriptionCheck" />
+
+    <TextView
+        style="@style/TextSpec"
+        android:id="@+id/tv_item_repository"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="44dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/img_item_photo"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item_username" />
+
+    <ImageView
+        style="@style/TextSpec.ImgView"
+        android:id="@+id/iv_my_location"
+        android:contentDescription="@string/ico_myLocation"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item_name"
+        app:srcCompat="@drawable/ic_baseline_my_location_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
