@@ -64,16 +64,7 @@ class MainActivity : AppCompatActivity() {
     // Send data as mentioned within parameter putExtra to DetailUserActivity
     private fun showSelectedUser(user: DetailUser) {
         val manageDetailIntent = Intent(this@MainActivity, DetailUserActivity::class.java)
-            .apply {
-                putExtra(DetailUserActivity.EXTRA_USERNAME, user.username)
-                putExtra(DetailUserActivity.EXTRA_FULL_NAME, user.fullName)
-                putExtra(DetailUserActivity.EXTRA_AVATAR, user.avatar)
-                putExtra(DetailUserActivity.EXTRA_LOCATION, user.location)
-                putExtra(DetailUserActivity.EXTRA_COMPANY, user.company)
-                putExtra(DetailUserActivity.EXTRA_REPOSITORY, user.repository)
-                putExtra(DetailUserActivity.EXTRA_FOLLOWERS, user.followers)
-                putExtra(DetailUserActivity.EXTRA_FOLLOWING, user.following)
-            }
+        manageDetailIntent.putExtra(DetailUserActivity.EXTRA_DETAIL_USER, user)
         startActivity(manageDetailIntent)
     }
 }
