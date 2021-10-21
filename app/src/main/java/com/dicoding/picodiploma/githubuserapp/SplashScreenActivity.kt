@@ -21,7 +21,7 @@ class SplashScreenActivity : AppCompatActivity() {
 
         /* postDelayed method usage is to send a message
         *  with a delayed time. */
-        Handler().postDelayed ({
+        Handler(mainLooper).postDelayed ({
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()

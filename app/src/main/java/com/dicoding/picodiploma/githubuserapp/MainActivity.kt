@@ -1,10 +1,9 @@
 package com.dicoding.picodiploma.githubuserapp
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.res.Configuration
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -25,7 +24,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private val listUser: ArrayList<DetailUser>
-        @SuppressLint("Recycle")
         get() {
             val username = resources.getStringArray(R.array.username)
             val fullName = resources.getStringArray(R.array.fullname)
@@ -35,11 +33,13 @@ class MainActivity : AppCompatActivity() {
             val repository = resources.getStringArray(R.array.repository)
             val following = resources.getStringArray(R.array.following)
             val followers = resources.getStringArray(R.array.followers)
+
             val listUser = ArrayList<DetailUser>()
             for (i in username.indices) {
                 val user = DetailUser(username[i], fullName[i], avatar.getResourceId(i, -1), location[i], company[i], repository[i], following[i], followers[i])
                 listUser.add(user)
             }
+            avatar.recycle()
             return listUser
         }
 
